@@ -1,0 +1,6 @@
+header {
+    padding-left: 3%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
