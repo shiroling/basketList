@@ -1,6 +1,32 @@
-header {
+html{
+    margin: 1%;
+    background-color: #eeeeee;
+}
+
+body{
+    padding: 10px;
+    background-color: #ffeeff;
+    height: 100%;
+}
+
+body header {
     padding-left: 3%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
+
+.caracteristique table{
+    margin: 10px;
+
+}
+
+header tr{
+ 
+}
+
+main{
+    
+}
+
