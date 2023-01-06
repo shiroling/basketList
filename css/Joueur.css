@@ -1,6 +1,42 @@
+html{
+    margin: 1%;
+    background-color: #eeeeee;
+}
+
+body{
+    padding: 10px;
+    background-color: #ffeeff;
+    height: 100%;
+}
+
 header {
     padding-left: 3%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+.pitiCarte{
+    border: 1px solid;
+    display: flex;
+    flex: 1 0 20%;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    margin: 10px;
+    background-color: #eeeeee;
+    padding: 5px;
+}
+
+.caracteristique {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
