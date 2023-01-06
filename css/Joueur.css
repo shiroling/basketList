@@ -9,24 +9,34 @@ body{
     height: 100%;
 }
 
-body header {
+header {
     padding-left: 3%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.caracteristique table{
+.pitiCarte{
+    border: 1px solid;
+    display: flex;
+    flex: 1 0 20%;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
     margin: 10px;
-
+    background-color: #eeeeee;
+    padding: 5px;
 }
 
-header tr{
- 
+.caracteristique {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-main{
-    
-}
+
 
