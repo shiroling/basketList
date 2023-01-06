@@ -1,21 +1,38 @@
 <?php
+namespace App;
+use PDO;
 
-    class BDD{
+class connexionBase {
 
-        public function __construct(){
-            $server = 'localhost';
-		        $db = 'bd_php_hand';
-		        $login = 'root';
-		        $mdp = '';
+    private $db_name = "ETUPRE";
+    private $db_user = "CTQ4266A";
+    private $db_pass = "toor";
+    private $db_host = "host=telline.univ-tlse3.fr";
+    private $pdo;
 
-            try {
-                $this->linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);
-                //$this->linkpdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-        	}
-    	}
-	}
+    public function __construct()
+    {
+    }
 
+    public function getDB()
+    {
+        $this->pdo = new PDO('oracle:dbname=ETUPRE;host=telline.univ-tlse3.fr', 'CTQ4266A', 'toor');
+        return $this->pdo;
+    }
+
+
+    public function getDebugDB()
+    {
+        $PDO =  new PDO('oracle:dbname=ETUPRE;host=telline.univ-tlse3.fr', 'CTQ4266A', 'toor');
+        $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->pdo = $PDO;
+        return $this->pdo;
+    }
+
+    public function query($statement)
+    {
+        $this->getDB()->query($statement);
+
+    }
+}
 ?>
