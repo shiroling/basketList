@@ -15,6 +15,24 @@
             Valeur
         </th>
         <tr>
+            
+            <td>
+                Photo :
+            </td>
+            <td>
+                <input type="file", name="Photo" accept="image/png, image/jpeg">
+                <!-- https://stackoverflow.com/questions/52904212/how-to-upload-png-file-to-database-using-url -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                License :
+            </td>
+            <td>
+                <input type="text", name="License">
+            </td>
+        </tr>
+        <tr>
             <td>
                 Nom :
             </td>
@@ -63,7 +81,15 @@
                 Taille :
             </td>
             <td>
-                <input type="text", name="Taille" placeholder="x.xx">
+                <input type="text", name="Taille" placeholder="1.23m">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Poid :
+            </td>
+            <td>
+                <input type="text", name="Poid" placeholder="123.45kg">
             </td>
         </tr>
         <tr>
@@ -77,6 +103,14 @@
                     <option value="SUSPENDU">SUSPENDU</option>
                     <option value="ABSENT">ABSENT</option>
                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Commentaire :
+            </td>
+            <td>
+                <input type="text", name="Commentaire" style="height:150px;">
             </td>
         </tr>
     </table>
