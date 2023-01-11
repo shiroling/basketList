@@ -10,14 +10,8 @@
 
 </head>
 <body>
-    <header>
+    <main>
         <img src="../img/Joueur.jpg" alt="image Joueur" width="30%">
-
-        <div class="boutons">
-            <input type="button" value="Modifier">
-            
-        </div>
-
         <div class="caracteristique">
             <div class="pitiCarte">
                 <table>
@@ -26,10 +20,11 @@
                     </th>
                     <tr>
                         <td>
-                            LeBron
+                            <input type="text", value="lebron">
                         </td>
                     </tr>
                 </table>
+                
             </div>
 
             <div class="pitiCarte">
@@ -39,7 +34,7 @@
                     </th>
                     <tr>
                         <td>
-                            James
+                            <input type="text", value="James">
                         </td>
                     </tr>
                 </table>
@@ -52,7 +47,7 @@
                     </th>
                     <tr>
                         <td>
-                            6
+                            <input type="text", value="6">
                         </td>
                     </tr>
                 </table>
@@ -65,20 +60,7 @@
                     </th>
                     <tr>
                         <td>
-                            oui
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="pitiCarte">
-                <table>
-                    <th>
-                        Nom
-                    </th>
-                    <tr>
-                        <td>
-                            LeBron
+                            <input type="text", value="oui">
                         </td>
                     </tr>
                 </table>
@@ -91,7 +73,7 @@
                     </th>
                     <tr>
                         <td>
-                            1984/12/30
+                            <input type="text", value="1984/12/30">
                         </td>
                     </tr>
                 </table>
@@ -104,7 +86,7 @@
                     </th>
                     <tr>
                         <td>
-                            206cm
+                            <input type="text", value="206cm">
                         </td>
                     </tr>
                 </table>
@@ -118,16 +100,21 @@
                     </th>
                     <tr>
                         <td>
-                            unStatus
+                            <select>
+                                <option value="ACTIF">ACTIF</option>
+                                <option value="BLESSE">BLESSE</option>
+                                <option value="SUSPENDU">SUSPENDU</option>
+                                <option value="ABSENT">ABSENT</option>
+                            </select>
                         </td>
                     </tr>
                 </table>
             </div>
             
         </div>
-        
-
-    </header>
-    
+            <br>
+            <input type="button" value="Valider">
+            <input type="button" value="Annuler">
+    </main>
 </body>
 </html>
