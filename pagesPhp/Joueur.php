@@ -1,16 +1,36 @@
+<?php
+
+
+    require(../fonctionsPhp/conx.php);
+    
+    
+    function getJoueurs() {
+        $bd = new connexionBase();
+        $pdo = $bd->getDB();
+        $st = $pdo->query("Select * from Joueurs");   
+        return $st 
+    }
+
+    function afficherListeJoueurs() {
+        $st = getJoueurs();
+        print_r($st);
+    } 
+
+?>
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="../css/Joueur.css" rel="stylesheet">
     <title>ListeJoueur </title>
 </head>
 <body>
 
     <header>
-        <input type="button" value="Ajouter un joueur">
+        <input type="button" value="Ajouter un nouveau joueur">
     </header>
 
     <table>
@@ -36,9 +56,11 @@
             
         </th>
         <th>
-            5 de depart
+           
+           Voir details
+            
         </th>
-        <!-- un tr par joueur -->
+         un tr par joueur 
         <tr>
             <td>
                 unNom
@@ -56,13 +78,12 @@
                 <input type="button" value="Modifier" />
             </td>
             <td>
-                <!-- id = numero du joueur -->
-                <input type="checkbox" name="5 de depart" id="0">
+                Ouvre la page Joueur
+                <input type="button" value="details" />
             </td>
         </tr>
         
-        
     </table>
-    <input type="button" value="Valider" name="VALIDER">
 </body>
 </html>
+-->

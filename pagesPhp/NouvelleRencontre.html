@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/NouvelleRencontre.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>
+            libellé
+        </th>
+        <th>
+            Valeur
+        </th>
+        <tr>
+            
+            <td>
+                Date :
+            </td>
+            <td>
+                <input type="date" name="DATE">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Heure debut :
+            </td>
+            <td>
+                <input type="time" name="HEUREDEBUT">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Heure fin :
+            </td>
+            <td>
+                <input type="time" name="HEUREFIN">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nom equipe adverse :
+            </td>
+            <td>
+                <input type="text", name="ADVERSE">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Adresse rencontre :
+            </td>
+            <td>
+                <input type="text", name="ADRESSE">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Score locaux:
+            </td>
+            <td>
+                <input type="text", name="LOCAUX">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Score visiteur:
+            </td>
+            <td>
+                <input type="text", name="VISITEUR">
+            </td>
+        </tr> 
+    </table>
+    <input type="button" value="Choisir les joueurs" name="LISTEJOUEUR" onclick="window.location.href='../html/ListeJoueurPourRencontre.html'">
+    <input type="button" name="ANNULER" value="Annuler">
+</body>
+</html>

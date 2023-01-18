@@ -8,8 +8,13 @@ body{
     background-color: #ffeeff;
     height: 100%;
 }
+.truc{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+}
 
-header {
+main {
     padding-left: 3%;
     display: flex;
     justify-content: flex-start;
@@ -25,18 +30,30 @@ header {
     align-items: center;
     justify-content: center;
     width: 7em;
+
     margin: 10px;
-    background-color: #eeeeee;
+    background-color: #dddddd;
     padding: 5px;
 }
 
 .caracteristique {
-    background-color: red;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
+.boutons{
+    background-color: aqua;
+    width: 50%;
+    height: 100%;
+}
+
+.boutons input{
+    width: 33%;
+    height: 60%;
+}
 
 

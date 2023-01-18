@@ -35,10 +35,23 @@
             Date
         </th>
         <th>
-            Supprimer
+            Poste
+            
         </th>
         <th>
-            Modifier
+           
+            Status
+            
+        </th>
+        <th>
+            
+            Supprimer
+            
+        </th>
+        <th>
+           
+           Voir details
+            
         </th>
         <!-- un tr par joueur -->
         <tr>
@@ -52,10 +65,10 @@
                 unPoste
             </th>
             <td>
-                <input type="button" value="Supprimer" />
+                unStatus
             </td>
             <td>
-                <input type="button" value="Modifier" />
+                <input type="button" value="Supprimer" />
             </td>
         </tr>
         
