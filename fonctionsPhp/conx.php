@@ -1,32 +1,19 @@
 <?php
-namespace App;
-use PDO;
+	function getPDOConnection() {
+		$host = "153.92.220.151";
+		$dbname = "u161682765_LeSport";
+		$username = "u161682765_couturiLeclerc";
+		$password = "~2Gqv?Kg[9lB";
+		try {
+			$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+			// set the PDO error mode to exception
+			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			return $conn;
+		}
+		catch(PDOException $e) {
+			echo "Connection failed: " . $e->getMessage();
+		}
+	}
 
-class connexionBase {
 
-    private $db_name = "ETUPRE";
-    private $db_user = "CTQ4266A";
-    private $db_pass = "toor";
-    private $db_host = "host=telline.univ-tlse3.fr";
-
-    public function __construct() {
-    }
-
-    public function getDB() {
-        $this->pdo = new PDO('oracle:dbname=ETUPRE;host=telline.univ-tlse3.fr', 'CTQ4266A', 'toor');
-        return $this->pdo;
-    }
-
-    public function getDebugDB() {
-        $PDO =  new PDO('oracle:dbname=ETUPRE;host=telline.univ-tlse3.fr', 'CTQ4266A', 'toor');
-        $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->pdo = $PDO;
-        return $this->pdo;
-    }
-
-    public function query($statement) {
-        $this->getDB()->query($statement);
-
-    }
-}
 ?>
