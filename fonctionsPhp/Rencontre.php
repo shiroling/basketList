@@ -47,23 +47,60 @@ function printRencontresAll() {
     echo("
         <table>
         <tr>
-            <th> Libellé </th>
-            <th> Date et heure </th>
-            <th> Lieu </th>
-            <th> Score </th>
+            <th>Libellé</th>
+            <th>Date et heure</th>
+            <th>Lieu</th>
+            <th>Score</th>
+            <th>Modifier</th>
         </tr>"
         );
 
     foreach ($st as $r) {
-        echo (" <tr>
-                    <td>" . getNomRencontre($r) . "</td>
-                    <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
-                    <td>" . getLieuRencontre($r) . "</td>
-                    <td>" . getScoresRencontre($r) . "</td>
-                </tr>"
+        echo (
+        "<tr>
+            <td>" . getNomRencontre($r) . "</td>
+            <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
+            <td>" . getLieuRencontre($r) . "</td>
+            <td>" . getScoresRencontre($r) . "</td>
+            <td> <a href=\"visuRencontre.php?id=". $item['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+        </tr>"
         );
     }
     echo("</table>");
 }
 
+
+
+
+<table>
+        <th>
+            Nom Equipe adverce
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Supprimer
+        </th>
+        <th>
+            Modifier
+        </th>
+        <!-- un tr par joueur -->
+        <tr>
+            <td>
+                unNom
+            </td>
+            <td>
+                uneDate
+            </td>
+
+            <td>
+                <input type="button" value="Supprimer" />
+            </td>
+            <td>
+                <input type="button" value="Modifier" />
+            </td>
+        </tr>
+        
+    </table>
 ?>
