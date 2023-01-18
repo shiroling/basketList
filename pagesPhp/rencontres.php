@@ -1,44 +1,44 @@
+<?php
+    include("../fonctionsPhp/Rencontre.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/Joueur.css" rel="stylesheet">
+    
     <title>ListeJoueur </title>
 </head>
 <body>
 
-    <header>
-        <input type="button" value="Ajouter un nouveau joueur">
-    </header>
+    <?php
+
+        require("header.php")
+    ?>
+
+    <div>
+        <input type="button" value="Ajouter">
+    </div>
+    <div>
+    <?php
+        printRencontresAll();
+    ?>
+        
+    </div>
 
     <table>
         <th>
-            Nom
+            Nom Equipe adverce
         </th>
         <th>
-            Prenom
-            
+            Date
         </th>
         <th>
-            Poste
-            
-        </th>
-        <th>
-            
             Supprimer
-            
         </th>
         <th>
-           
             Modifier
-            
-        </th>
-        <th>
-           
-           Voir details
-            
         </th>
         <!-- un tr par joueur -->
         <tr>
@@ -56,10 +56,6 @@
             </td>
             <td>
                 <input type="button" value="Modifier" />
-            </td>
-            <td>
-                <!-- Ouvre la page Joueur -->
-                <input type="button" value="details" />
             </td>
         </tr>
         
