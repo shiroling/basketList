@@ -16,6 +16,7 @@
         <input type="button" value="Ajouter">
     </header>
     <?php
+        require("../fonctionsPhp/Rencontre.php");
         printRencontresAll();
     ?>
     

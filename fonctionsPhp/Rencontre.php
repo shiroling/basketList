@@ -19,9 +19,9 @@ function isFinished($r) {
 
 function getNomRencontre($r) {
     if(isDomicile($r)) {
-        return getClubName(). " -- " . $r.["NomOpposant"];
+        return getClubName(). " -- " . $r['NomOpposant'];
     } else {
-        return $r.["NomOpposant"]. " -- ".getClubName();
+        return $r['NomOpposant']. " -- ". getClubName();
     }
 }
 
@@ -35,9 +35,9 @@ function getLieuRencontre($r) {
 
 function getScoresRencontre($r) {
     if(isFinished($r)) {
-        return $r['ScoreLocaux'] ." -- ". $r['ScoreVisiteurs'] != NULL;
+        return $r['ScoreLocaux'] ." -- ". $r['ScoreVisiteurs'];
     } else {
-        return $r[' -- '];
+        return ' -- ';
     }
 }
 
@@ -59,10 +59,10 @@ function printRencontresAll() {
         echo (
         "<tr>
             <td>" . getNomRencontre($r) . "</td>
-            <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
+            <td>" . $r['dateMatch'] . " à " . $r['DebutMatch'] . " </td>
             <td>" . getLieuRencontre($r) . "</td>
             <td>" . getScoresRencontre($r) . "</td>
-            <td> <a href=\"visuRencontre.php?id=". $item['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>"
         );
     }
