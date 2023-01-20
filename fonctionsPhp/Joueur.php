@@ -128,25 +128,23 @@ function printCarte($libele, $info) {
     ");
 }
 
-function printVisuJoueur($joueurs)
+function printVisuJoueur($j)
 {
-    foreach ($joueurs as $j) {
-        echo ("
-            <div>
-                <div classe=\"imageJoueur\">
-                    <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
-                </div>
-                <div class=\"caracteristiques\">" .
-                    printCarte("Nom", $j['Nom']) .
-                    printCarte("Prenom", $j['Prenom']) .
-                    printCarte("Numero", $j['Numero']) .
-                    printCarte("Poste", getPoste($j)) .
-                    printCarte("Date de naissance", $j['DateNaissance']) .
-                    printCarte("Statut", getStatut($j)) . "
-                </div>
-            </div>"
-        );
-    }
+    echo ("
+        <div>
+            <div classe=\"imageJoueur\">
+                <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
+            </div>
+            <div class=\"caracteristiques\">" .
+                printCarte("Nom", $j['Nom']) .
+                printCarte("Prenom", $j['Prenom']) .
+                printCarte("Numero", $j['Numero']) .
+                printCarte("Poste", getPoste($j)) .
+                printCarte("Date de naissance", $j['DateNaissance']) .
+                printCarte("Statut", getStatut($j)) . "
+            </div>
+        </div>"
+    );
 }
     function printCartejoueur($idJoueur) {
     echo ("PrintCartejoueur() n'est pas encore implémenté !!!");

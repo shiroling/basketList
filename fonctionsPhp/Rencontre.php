@@ -69,7 +69,7 @@ function printRencontresAll() {
     echo("</table>");
 }
 
-
+?>
 
 
 <table>
@@ -103,4 +103,3 @@ function printRencontresAll() {
         </tr>
         
     </table>
-?>
