@@ -8,7 +8,10 @@
     <title>Liste des rencontres </title>
 </head>
 <body>
-
+    <?php
+    require("header.php")
+    ?>
+    
     <header>
         <input type="button" value="Ajouter">
     </header>
