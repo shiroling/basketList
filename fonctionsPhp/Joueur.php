@@ -169,6 +169,10 @@ function printVisuJoueur($j)
                 printCarte("Date de naissance", $j['DateNaissance']) .
                 printCarte("Statut", getStatut($j)) . "
             </div>
+            <div classe=\"boutons\">
+                <input type=\"button\" value=\"Modifier\">
+                <input type=\"button\" value=\"Supprimer\">
+            </div>
         </div>"
     );
 }
