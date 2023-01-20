@@ -70,36 +70,3 @@ function printRencontresAll() {
 }
 
 ?>
-
-
-<table>
-        <th>
-            Nom Equipe adverce
-        </th>
-        <th>
-            Date
-        </th>
-        <th>
-            Supprimer
-        </th>
-        <th>
-            Modifier
-        </th>
-        <!-- un tr par joueur -->
-        <tr>
-            <td>
-                unNom
-            </td>
-            <td>
-                uneDate
-            </td>
-
-            <td>
-                <input type="button" value="Supprimer" />
-            </td>
-            <td>
-                <input type="button" value="Modifier" />
-            </td>
-        </tr>
-        
-    </table>

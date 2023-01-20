@@ -7,7 +7,7 @@ function getJoueur($idJoueur) {
     $st->bindParam(1, $id);
     $id = $idJoueur;
     $st->execute();
-    return $st;
+    return $st->fetch();
     
 }
 function getJoueurs() {
