@@ -21,9 +21,7 @@
         <input type="button" value="Ajouter">
     </div>
     <div>
-    <?php
-        printRencontresAll();
-    ?>
+
         
     </div>
 
