@@ -8,12 +8,6 @@ body{
     background-color: #ffeeff;
     height: 100%;
 }
-
-img{
-    width: 30%;
-    height: auto;
-}
-
 .truc{
     display: flex ;
     align-items: center;
@@ -40,26 +34,6 @@ main {
     margin: 10px;
     background-color: #dddddd;
     padding: 5px;
-}
-
-.caracteristique {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
-.boutons{
-    background-color: aqua;
-    width: 50%;
-    height: 100%;
-}
-
-.boutons input{
-    width: 33%;
-    height: 60%;
 }
 
 
