@@ -136,6 +136,9 @@ function printVisuJoueur($joueurs)
                 <div classe=\"imageJoueur\">
                     <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
                 </div>
+                <div>
+                    <input type=\"button\" value=\"Modifier\">
+                </div>
                 <div class=\"caracteristiques\">" .
                     printCarte("Nom", $j['Nom']) .
                     printCarte("Prenom", $j['Prenom']) .
