@@ -18,10 +18,6 @@
     </header>
     <?php
         printTableauJoueursAll();
-
-        echo ("<br><br><br>");
-
-        printTableauJoueursActifs();
     ?>
 
 </body>
