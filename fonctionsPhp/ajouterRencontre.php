@@ -7,7 +7,7 @@
 		<main>
 			<form method="POST" action="validerCreerRencontre.php"  >
 				<fieldset>
-					<legend>Nouveau rencontre</legend>
+					<legend>Nouvelle rencontre</legend>
 					<label for="licence"> ### </label>
 					<input type="text" name="licence" id="licence" maxlength="8" minlength="8" required>
 					<br>

@@ -160,8 +160,7 @@ function printVisuJoueur($j)
                 printCarte("Statut", getStatut($j)) . "
             </div>
             <div classe=\"boutons\">
-                <input type=\"button\" value=\"Modifier\">
-                <input type=\"button\" value=\"Supprimer\">
+                <td> <a href=\"ModifierJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
             </div>
         </div>"
     );
