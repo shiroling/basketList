@@ -1,5 +1,5 @@
 <?php
-require("conx.php");
+require("common.php");
 
 function getJoueur($idJoueur) {
     $pdo = getPDOConnection();
@@ -8,9 +8,14 @@ function getJoueur($idJoueur) {
     $id = $idJoueur;
     $st->execute();
     return $st;
-    
 }
 function getJoueurs() {
+    $pdo = getPDOConnection();
+    $st = $pdo->query("Select * from Joueur");   
+    return $st;
+}
+
+function getJoueursRencontre($r) {
     $pdo = getPDOConnection();
     $st = $pdo->query("Select * from Joueur");   
     return $st;
@@ -109,8 +114,10 @@ function printTableauJoueursActifs() {
     echo ("</table>");
 }
 
-function printTableauJoueursRencontre() {
-    $st = getJoueursActifs();
+
+
+function printTableauJoueursRencontre($r) {
+    $st = getJoueursRencontre($r);
     echo ("
         <table>
         <tr>
@@ -135,24 +142,7 @@ function printTableauJoueursRencontre() {
     echo ("</table>");
 }
 
-function printCarte($libele, $info) {
-    echo ("
-        <div class=\"pitiCarte\">
-            <table>
-            <tr>
-                <th>
-                    " . $libele . "
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    " . $info . "
-                </td>
-            </tr>
-            </table>
-        </div>
-    ");
-}
+
 
 function printVisuJoueur($j)
 {

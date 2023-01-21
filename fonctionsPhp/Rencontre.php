@@ -1,7 +1,14 @@
 <?php
-require("conx.php");
-require("common.php");
+require("Joueur.php");
 
+function getRencontre($idRencontre) {
+    $pdo = getPDOConnection();
+    $st = $pdo->prepare("Select * from Rencontre where id_rencontre = ?");
+    $st->bindParam(1, $id);
+    $id = $idRencontre;
+    $st->execute();
+    return $st;
+}
 
 function getRencontresAll() {
     $pdo = getPDOConnection();
@@ -69,4 +76,23 @@ function printRencontresAll() {
     echo("</table>");
 }
 
+function printVisuRencontre($r)
+{
+    echo ("
+        <div>
+            <div class=\"LesPitiCarts\">" .
+                printCarte("Equipe adverse", $r['NomOpposant']) .
+                printCarte("Date", $r['dateMatch']) .
+                printCarte("Lancement", $r['DebutMatch']) .
+                printCarte("Heure", $r['DebutMatch']) .
+                printCarte("Lieu", getLieuRencontre($r)) .
+                printCarte("Score", getScoresRencontre($r))."
+            </div>
+            <div class=\"laListe\">".
+                printTableauJoueursRencontre($r).
+            "</div>
+            <input type=\"button\" value=\"Modifier\">
+        </div>"
+    );
+}
 ?>
