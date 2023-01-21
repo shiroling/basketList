@@ -2,7 +2,7 @@
 <html>
 	<?php 
 	// le but du fichier est de faire le formulaire et ensuite  
-	require("../pages.php/head.php") ?>
+	require("../pagesPhp/head.php") ?>
 	<body>
 		<main>
 			<form method="POST" action="validerCreerRencontre.php"  >
