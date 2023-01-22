@@ -67,7 +67,7 @@ function printRencontresAll() {
         echo (
         "<tr>
             <td>" . getNomRencontre($r) . "</td>
-            <td>" . $r['dateMatch'] . " à " . $r['DebutMatch'] . " </td>
+            <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
             <td>" . getLieuRencontre($r) . "</td>
             <td>" . getScoresRencontre($r) . "</td>
             <td> <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>

@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='time' name='debut' value='".$r['DebutMatch']."'>
+                    <input type='time' name='debut' value='".$r['HeureDebut']."'>
                     </td>
                 </tr>
                 </table>
@@ -54,7 +54,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='time' name='fin' value='".$r['FinMatch']."'>
+                    <input type='time' name='fin' value='".$r['HeureFin']."'>
                     </td>
                 </tr>
                 </table>
@@ -68,7 +68,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='date' name='date' value='".$r['dateMatch']."'>
+                    <input type='date' name='date' value='".$r['DateMatch']."'>
                     </td>
                 </tr>
                 </table>
@@ -116,7 +116,7 @@
                 </table>
             </div>
             <input type='submit' value='Mettre à jour'>
-            <a href=\"visuRencontre.php?id=". $j['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
+            <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
 
         </form>
         </section>";

@@ -12,7 +12,7 @@
 
 	$pdo = getPDOConnection();
 
-	$sql = "UPDATE Rencontre SET NomOpposant = ?, DebutMatch = ?, FinMatch = ?, dateMatch = ?, Lieu_de_rencontre = ?, ScoreLocaux = ?, ScoreVisiteurs = ? WHERE Id_Rencontre = ?";
+	$sql = "UPDATE Rencontre SET NomOpposant = ?, HeureDebut = ?, HeureFin = ?, DateMatch = ?, Lieu_de_rencontre = ?, ScoreLocaux = ?, ScoreVisiteurs = ? WHERE Id_Rencontre = ?";
 	
 	$stmt = $pdo->prepare($sql);
 	
