@@ -34,7 +34,7 @@
 			<select name="poste"  id="poste" required>
 					<option value="MENEUR">Meneur</option>
                     <option value="AILIER">Ailier</option>
-                    <option value="Pivot">Pivot</option>
+                    <option value="PIVOT">Pivot</option>
             </select>
 			<br>
 			<label for="statut">Statut</label>

@@ -32,34 +32,11 @@ function getJoueursActifs() {
 }
 
 function getPoste($poste) {
-    if ($poste == "INTERIEUR") {
-        return "pivot";
-    }else
-    if ($poste == "MENEUR") {
-        return "meneur";
-    }else
-    if ($poste == "AILIER") {
-        return "alier";
-    }else {
-        return "Poste non définit";
-    }
+    return $poste;
 }
 
-function getStatut($poste) {
-    if ($poste == "ACTIF") {
-        return "Actif";
-    }else
-    if ($poste == "BLESSE") {
-        return "Blessé";
-    }else
-    if ($poste == "SUSPENDU") {
-        return "¨Suspendu";
-    }else 
-    if ($poste == "ABSENT") {
-        return "Absent";
-    }else {
-        return "Statut non définit";
-    }
+function getStatut($statut) {
+    return $statut;
 }
 
 function printTableauJoueursAll() {
@@ -190,12 +167,12 @@ function printVisuJoueur($j)
                 printCarte("Nom", $j['Nom']) .
                 printCarte("Prenom", $j['Prenom']) .
                 printCarte("Numero", $j['Numero']) .
-                printCarte("Poste", getPoste($j)) .
+                printCarte("Poste", getPoste($j['Poste'])) .
                 printCarte("Date de naissance", $j['DateNaissance']) .
-                printCarte("Statut", getStatut($j)) . "
+                printCarte("Statut", getStatut($j['Statut'])) . "
             </div>
             <div classe=\"boutons\">
-                <td> <a href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+                <td> <a href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a> </td>
             </div>
         </div>"
     );

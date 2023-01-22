@@ -17,7 +17,7 @@
     <?php
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $j = getRencontre($id)->fetch();
+            $j = getRencontre($id);
             printVisuRencontre($j);
         } else {
             echo ("<h3> Aucun joueur à afficher</h3>");

@@ -15,6 +15,8 @@
         echo "
         <main>
         <section class='LesPitiCarts'>
+        <form action='../fonctionsPhp/changerParamRencontre.php?id_rencontre=".$id_rencontre."' method='POST'>
+
             <div class='pitiCarte'>
                 <table>
                 <tr>
@@ -24,7 +26,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='text' value='".$r['NomOpposant']."'>
+                    <input type='text' name='nomOpposant' value='".$r['NomOpposant']."'>
                     </td>
                 </tr>
                 </table>
@@ -38,7 +40,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='time' value='".$r['DebutMatch']."'>
+                    <input type='time' name='debut' value='".$r['DebutMatch']."'>
                     </td>
                 </tr>
                 </table>
@@ -52,7 +54,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='time' value='".$r['FinMatch']."'>
+                    <input type='time' name='fin' value='".$r['FinMatch']."'>
                     </td>
                 </tr>
                 </table>
@@ -66,7 +68,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='date' value='".$r['dateMatch']."'>
+                    <input type='date' name='date' value='".$r['dateMatch']."'>
                     </td>
                 </tr>
                 </table>
@@ -80,7 +82,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='text' value='".$r['Lieu_de_rencontre']."'>
+                    <input type='text' name='lieu' value='".$r['Lieu_de_rencontre']."'>
                     </td>
                 </tr>
                 </table>
@@ -94,7 +96,7 @@
                 </tr>
                 <tr>
                     <td>
-                    <input type='text' value='".$r['ScoreLocaux']."'>
+                    <input type='text' name='scoreLocaux' value='".$r['ScoreLocaux']."'>
                     </td>
                 </tr>
                 </table>
@@ -108,15 +110,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type='text' value='".$r['ScoreVisiteurs']."'> 
+                        <input type='text' name='scoreVisiteurs' value='".$r['ScoreVisiteurs']."'> 
                     </td>
                 </tr>
                 </table>
             </div>
+            <input type='submit' value='Mettre à jour'>
+            <a href=\"visuRencontre.php?id=". $j['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
+
+        </form>
         </section>";
 
-    echo    printTableauJoueursActifsModif($r['Id_Rencontre']).
-            "</main>";
+    echo printTableauJoueursActifsModif($r['Id_Rencontre']).
+    "</main>";
     }
     require("header.php");
     if (!isset($_GET['id'])) {
@@ -125,9 +131,6 @@
         $id_rencontre = $_GET['id'];
         printModifRencontre($id_rencontre); 
     }
-
-
 ?>
-
 </body>
 </html>

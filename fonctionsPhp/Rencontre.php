@@ -81,17 +81,16 @@ function printVisuRencontre($r)
 {
     echo ("
         <div>
-            <div class=\"LesPitiCarts\">" .
+            <section class=\"LesPitiCarts\">" .
                 printCarte("Equipe adverse", $r['NomOpposant']) .
-                printCarte("Date", $r['dateMatch']) .
-                printCarte("Lancement", $r['DebutMatch']) .
-                printCarte("Heure", $r['DebutMatch']) .
+                printCarte("Date", $r['DateMatch']) .
+                printCarte("Lancement", $r['HeureDebut']) .
                 printCarte("Lieu", getLieuRencontre($r)) .
                 printCarte("Score", getScoresRencontre($r))."
-            </div>
-            <div class=\"laListe\">".
+            </section>
+            <section class=\"laListe\">".
                 printTableauJoueursRencontre($r).
-            "</div>
+            "</section>
             <a href=\"ModifierRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a>
         </div>"
     );
