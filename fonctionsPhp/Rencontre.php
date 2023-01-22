@@ -7,7 +7,8 @@ function getRencontre($idRencontre) {
     $st->bindParam(1, $id);
     $id = $idRencontre;
     $st->execute();
-    return $st;
+
+    return $st->fetch();
 }
 
 function getRencontresAll() {
@@ -91,7 +92,7 @@ function printVisuRencontre($r)
             <div class=\"laListe\">".
                 printTableauJoueursRencontre($r).
             "</div>
-            <input type=\"button\" value=\"Modifier\">
+            <a href=\"ModifierRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a>
         </div>"
     );
 }

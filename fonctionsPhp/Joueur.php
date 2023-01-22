@@ -114,6 +114,41 @@ function printTableauJoueursActifs() {
     echo ("</table>");
 }
 
+function printTableauJoueursActifsModif($id_rencontre) {
+    $st = getJoueursActifs();
+    echo ("
+        <section class='tableauJoueursActifs'>
+        <form action='../fonctionsPhp/changerJoueursRencontre.php?id_rencontre=".$id_rencontre."' method='POST'>
+        <table>
+        <tr>
+            <th>Licence </th>
+            <th>Nom </th>
+            <th>Prenom </th>
+            <th>Poste </th>
+            <th>Selectionner</th> 
+            <th> Voir details</th>
+        </tr>
+    ");
+    foreach ($st as $item) {
+        echo("
+        <tr>
+            <td> " . $item['Licence'] . " </td>
+            <td> " . $item['Nom'] . " </td>
+            <td> " . $item['Prenom'] . "
+            <td> " . getPoste($item['Poste']) . " </td>
+            <td> <input type='checkbox' name='players[]' value='" . $item['Id_Joueur'] . "'> </td>
+            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+        </tr>
+        ");
+    }
+    echo ("
+        </table>
+        <input type='submit' value='Valider'>
+        </form>
+        </section>
+        ");
+}
+
 
 
 function printTableauJoueursRencontre($r) {
