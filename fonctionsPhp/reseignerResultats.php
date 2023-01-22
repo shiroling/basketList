@@ -1,18 +1,20 @@
 
 <html>
 <?php 
-// le but du fichier est de faire le formulaire et ensuite  
 require("../pagesPhp/head.php") ?>
 <body>
 <main>
 	<form method="POST" action="validerCreerRencontre.php"  >
 		<fieldset>
-			<legend>Adversaire</legend>
-			<label for="adversaire">Equipe adverse</label>
-			<input type="text" name="adversaire" id="adversaire" maxlength="50" minlength="8" required>
+			<label for="finRencontre">Horaire de fin</label>
+			<input type="time" name="finRencontre" id="finRencontre" min="080:0" max="22:00" required>
 			<br>
-			<label for="adresseAvd">Adresse adversaires</label>
-			<input type="text" name="adresseAvd" id="adresseAvd" maxlength="50" minlength="8" required>
+			<legend>Cloture de match</legend>
+			<label for="locScore">Score Locaux</label>
+			<input type="number" name="locScore" id="locScore" min="0" max="250" required>
+			<br>
+			<label for="visitScore">Score Visiteurs</label>
+			<input type="number" name="visitScore"  id="visitScore" min="0" max="250" required>
 			<br>
 		</fieldset>
 		<fieldset>
@@ -27,7 +29,7 @@ require("../pagesPhp/head.php") ?>
 			<input type="date" name="dateRencontre" id="dateRencontre" placeholder="01/02/2003" required>
 			<br>
 			<label for="horaire">Horaire de la rencontre</label>
-			<input type="time" name="horaire" id="horaire" min="08:00" max="21:30" required>
+			<input type="time" name="horaire" id="horaire" min="08:00" max="23:59" required>
 			<br>
 		</fieldset>
 	</form>
