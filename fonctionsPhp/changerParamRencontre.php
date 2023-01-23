@@ -1,4 +1,5 @@
 <?php
+	require("session.php");
 	require("../fonctionsPhp/common.php");
 
 	$id_rencontre = $_GET['id_rencontre'];

@@ -22,7 +22,7 @@ function getJoueursRencontre($r) {
 }
 
 function getImageJoueur($j) {
-    return "../img/" . $j['Photo'];
+    return "../photo/" . $j['Photo'];
 }
 
 function getJoueursActifs() {

@@ -1,4 +1,5 @@
 <?php
+	require("session.php");
 	require("../fonctionsPhp/common.php");
 	$id = $_GET['id_rencontre'];
 	$joueurs_selectionnes = $_POST['players'];

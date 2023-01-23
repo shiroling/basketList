@@ -1,3 +1,6 @@
+<?php 
+    require("../fonctionsPhp/session.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +156,6 @@
             </div>
             </form>
         </section>
-        <br>
     </main>";
     }
 
@@ -162,6 +164,7 @@
         $id = $_GET['id'];
         $j = getJoueur($id)->fetch();
         printModifJoueur($j);
+        require("../fonctionsPhp/uploadphoto.php");
     } else {
         echo ("<h3> Aucun joueur à afficher</h3>");
     }

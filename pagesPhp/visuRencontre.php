@@ -1,4 +1,5 @@
 <?php
+    require("../fonctionsPhp/session.php");
     require("../fonctionsPhp/Rencontre.php");
 ?>
 <!DOCTYPE html>

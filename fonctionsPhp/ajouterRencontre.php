@@ -1,6 +1,8 @@
 
 <html>
 <?php 
+require("session.php");
+
 // le but du fichier est de faire le formulaire et ensuite  
 require("../pagesPhp/head.php") ?>
 <body>

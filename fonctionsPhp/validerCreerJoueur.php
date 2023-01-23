@@ -1,4 +1,5 @@
 <?php
+	require("session.php");
 	require("../fonctionsPhp/common.php");
 	$pdo = getPDOConnection();
 	$licence = $_POST['licence'];

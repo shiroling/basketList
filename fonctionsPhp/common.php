@@ -1,7 +1,6 @@
 <?php
 require("conx.php");
 
-
 function getClubName() {
     return "Coquelicots lézaltois";
 }
@@ -31,6 +30,14 @@ function printCarte($libele, $info) {
             </table>
         </div>
     ");
+}
+
+function attribuerphoto($NUMLICENCE, $target_file) {
+
+    $pdo = getPDOConnection();
+    $stmt = $pdo->prepare("UPDATE Joueur SET Photo = ? WHERE Id_Joueur = ?");
+    
+    $stmt->execute([$target_file, $NUMLICENCE]);
 }
 
 ?>

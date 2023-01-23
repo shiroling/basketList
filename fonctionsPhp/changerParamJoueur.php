@@ -1,4 +1,5 @@
 <?php
+    require("session.php");
     require 'common.php';
     $pdo = getPDOConnection();
     $id_joueur = $_GET['id_joueur'];

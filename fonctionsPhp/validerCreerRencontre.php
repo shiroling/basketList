@@ -1,4 +1,5 @@
 <?php
+    require("session.php");
     require("../fonctionsPhp/common.php");
     $pdo = getPDOConnection();
     $dateRencontre = $_POST['dateRencontre'];

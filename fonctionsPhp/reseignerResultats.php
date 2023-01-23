@@ -1,6 +1,7 @@
 
 <html>
 <?php 
+require("session.php");
 require("../pagesPhp/head.php") ?>
 <body>
 <main>
