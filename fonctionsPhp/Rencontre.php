@@ -62,7 +62,7 @@ function printRencontresAll() {
             <th>Score</th>
             <th>Modifier</th>
         </tr>
-        </main>"
+        </"
         );
 
     foreach ($st as $r) {

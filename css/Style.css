@@ -1,9 +1,11 @@
 html{
     margin: 1%;
     background-color: #eeeeee;
+    height: 99%;
 }
 
 body{
+
     padding: 10px;
     background-color: #ffeeff;
     height: 100%;
@@ -24,8 +26,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+
 }
 
 .pitiCarte{
@@ -53,14 +56,14 @@ main {
 }
 
 .boutons{
-    background-color: aqua;
-    width: 50%;
+    margin: 15px;
+    width: 75%;
     height: 100%;
 }
 
 .boutons input{
-    width: 33%;
-    height: 60%;
+    width: 49%;
+    height: 100%;
 }
 
 nav {

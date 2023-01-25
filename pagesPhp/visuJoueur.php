@@ -20,6 +20,7 @@ require("../fonctionsPhp/Joueur.php");
         require("header.php");
     ?>
     <?php
+        echo"<main>";
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $j = getJoueur($id)->fetch();
@@ -27,6 +28,7 @@ require("../fonctionsPhp/Joueur.php");
         } else {
             echo ("<h3> Aucun joueur à afficher</h3>");
         }
+        echo"</main>";
     ?>
     </body>
 </html>

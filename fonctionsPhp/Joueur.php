@@ -165,14 +165,15 @@ function printVisuJoueur($j)
             <div classe=\"imageJoueur\">
                 <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
             </div>
-            <div class=\"caracteristiques\">" .
+            <div class=\"caracteristiques\">
+            " .
                 printCarte("Nom", $j['Nom']) .
                 printCarte("Prenom", $j['Prenom']) .
                 printCarte("Numero", $j['Numero']) .
                 printCarte("Poste", getPoste($j['Poste'])) .
                 printCarte("Date de naissance", $j['DateNaissance']) .
-                printCarte("Statut", getStatut($j['Statut'])) . "
-            </div>
+                printCarte("Statut", getStatut($j['Statut'])) . 
+            "</div>
             <div classe=\"boutons\">
                 <td> <a href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a> </td>
             </div>
