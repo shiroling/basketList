@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/Rencontre.css" rel="stylesheet">
+    <link href="../css/Style.css" rel="stylesheet">
     <title>Rencontre</title>
 </head>
 <body>
@@ -16,6 +16,7 @@
         require("header.php");
     ?>
     <?php
+        echo"<main>";
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $j = getRencontre($id);
@@ -23,6 +24,7 @@
         } else {
             echo ("<h3> Aucun joueur à afficher</h3>");
         }
+        echo"</main>";
     ?>
 
 </body>

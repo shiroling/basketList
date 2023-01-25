@@ -53,6 +53,7 @@ function getScoresRencontre($r) {
 function printRencontresAll() {
     $st = getRencontresAll();
     echo("
+        <main>
         <table>
         <tr>
             <th>Libellé</th>
@@ -60,7 +61,8 @@ function printRencontresAll() {
             <th>Lieu</th>
             <th>Score</th>
             <th>Modifier</th>
-        </tr>"
+        </tr>
+        </main>"
         );
 
     foreach ($st as $r) {

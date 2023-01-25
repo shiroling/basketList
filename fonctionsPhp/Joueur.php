@@ -42,6 +42,7 @@ function getStatut($statut) {
 function printTableauJoueursAll() {
     $st = getJoueurs();
     echo ("
+        <main>
         <table>
         <tr>
             <th> Licence </th>
@@ -50,6 +51,7 @@ function printTableauJoueursAll() {
             <th> Poste </th>
             <th> Voir details</th>
         </tr>
+        </main>
     ");
     foreach ($st as $item) {
         echo("

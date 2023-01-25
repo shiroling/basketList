@@ -11,7 +11,7 @@ require("../fonctionsPhp/Joueur.php");
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joueur</title>
-        <link href="../css/Joueur.css" rel="stylesheet">
+        <link href="../css/Style.css" rel="stylesheet">
 
     </head>
     <body>

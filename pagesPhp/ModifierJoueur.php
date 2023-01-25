@@ -14,6 +14,7 @@
 </head>
 <body>
     <?php
+    require("header.php");
     function isMeneur($j) {
         if ($j['Poste'] == 'MENEUR') {
             return true;
