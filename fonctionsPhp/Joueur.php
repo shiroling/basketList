@@ -1,5 +1,5 @@
 <?php
-require("conx.php");
+require("common.php");
 
 function getJoueur($idJoueur) {
     $pdo = getPDOConnection();
@@ -8,7 +8,6 @@ function getJoueur($idJoueur) {
     $id = $idJoueur;
     $st->execute();
     return $st;
-    
 }
 function getJoueurs() {
     $pdo = getPDOConnection();
@@ -16,8 +15,14 @@ function getJoueurs() {
     return $st;
 }
 
+function getJoueursRencontre($r) {
+    $pdo = getPDOConnection();
+    $st = $pdo->query("Select * from Joueur");   
+    return $st;
+}
+
 function getImageJoueur($j) {
-    return "../img/" . $j['Photo'];
+    return "../photo/" . $j['Photo'];
 }
 
 function getJoueursActifs() {
@@ -27,34 +32,11 @@ function getJoueursActifs() {
 }
 
 function getPoste($poste) {
-    if ($poste == "INTERIEUR") {
-        return "pivot";
-    }else
-    if ($poste == "MENEUR") {
-        return "meneur";
-    }else
-    if ($poste == "AILIER") {
-        return "alier";
-    }else {
-        return "Poste non définit";
-    }
+    return $poste;
 }
 
-function getStatut($poste) {
-    if ($poste == "ACTIF") {
-        return "Actif";
-    }else
-    if ($poste == "BLESSE") {
-        return "Blessé";
-    }else
-    if ($poste == "SUSPENDU") {
-        return "¨Suspendu";
-    }else 
-    if ($poste == "ABSENT") {
-        return "Absent";
-    }else {
-        return "Statut non définit";
-    }
+function getStatut($statut) {
+    return $statut;
 }
 
 function printTableauJoueursAll() {
@@ -109,8 +91,45 @@ function printTableauJoueursActifs() {
     echo ("</table>");
 }
 
-function printTableauJoueursRencontre() {
+function printTableauJoueursActifsModif($id_rencontre) {
     $st = getJoueursActifs();
+    echo ("
+        <section class='tableauJoueursActifs'>
+        <form action='../fonctionsPhp/changerJoueursRencontre.php?id_rencontre=".$id_rencontre."' method='POST'>
+        <table>
+        <tr>
+            <th>Licence </th>
+            <th>Nom </th>
+            <th>Prenom </th>
+            <th>Poste </th>
+            <th>Selectionner</th> 
+            <th> Voir details</th>
+        </tr>
+    ");
+    foreach ($st as $item) {
+        echo("
+        <tr>
+            <td> " . $item['Licence'] . " </td>
+            <td> " . $item['Nom'] . " </td>
+            <td> " . $item['Prenom'] . "
+            <td> " . getPoste($item['Poste']) . " </td>
+            <td> <input type='checkbox' name='players[]' value='" . $item['Id_Joueur'] . "'> </td>
+            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+        </tr>
+        ");
+    }
+    echo ("
+        </table>
+        <input type='submit' value='Valider'>
+        </form>
+        </section>
+        ");
+}
+
+
+
+function printTableauJoueursRencontre($r) {
+    $st = getJoueursRencontre($r);
     echo ("
         <table>
         <tr>
@@ -135,24 +154,7 @@ function printTableauJoueursRencontre() {
     echo ("</table>");
 }
 
-function printCarte($libele, $info) {
-    echo ("
-        <div class=\"pitiCarte\">
-            <table>
-            <tr>
-                <th>
-                    " . $libele . "
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    " . $info . "
-                </td>
-            </tr>
-            </table>
-        </div>
-    ");
-}
+
 
 function printVisuJoueur($j)
 {
@@ -165,13 +167,12 @@ function printVisuJoueur($j)
                 printCarte("Nom", $j['Nom']) .
                 printCarte("Prenom", $j['Prenom']) .
                 printCarte("Numero", $j['Numero']) .
-                printCarte("Poste", getPoste($j)) .
+                printCarte("Poste", getPoste($j['Poste'])) .
                 printCarte("Date de naissance", $j['DateNaissance']) .
-                printCarte("Statut", getStatut($j)) . "
+                printCarte("Statut", getStatut($j['Statut'])) . "
             </div>
             <div classe=\"boutons\">
-                <input type=\"button\" value=\"Modifier\">
-                <input type=\"button\" value=\"Supprimer\">
+                <td> <a href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a> </td>
             </div>
         </div>"
     );

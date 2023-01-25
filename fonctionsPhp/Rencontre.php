@@ -1,7 +1,15 @@
 <?php
-require("conx.php");
-require("common.php");
+require("Joueur.php");
 
+function getRencontre($idRencontre) {
+    $pdo = getPDOConnection();
+    $st = $pdo->prepare("Select * from Rencontre where id_rencontre = ?");
+    $st->bindParam(1, $id);
+    $id = $idRencontre;
+    $st->execute();
+
+    return $st->fetch();
+}
 
 function getRencontresAll() {
     $pdo = getPDOConnection();
@@ -59,7 +67,7 @@ function printRencontresAll() {
         echo (
         "<tr>
             <td>" . getNomRencontre($r) . "</td>
-            <td>" . $r['dateMatch'] . " à " . $r['DebutMatch'] . " </td>
+            <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
             <td>" . getLieuRencontre($r) . "</td>
             <td>" . getScoresRencontre($r) . "</td>
             <td> <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
@@ -69,4 +77,22 @@ function printRencontresAll() {
     echo("</table>");
 }
 
+function printVisuRencontre($r)
+{
+    echo ("
+        <div>
+            <section class=\"LesPitiCarts\">" .
+                printCarte("Equipe adverse", $r['NomOpposant']) .
+                printCarte("Date", $r['DateMatch']) .
+                printCarte("Lancement", $r['HeureDebut']) .
+                printCarte("Lieu", getLieuRencontre($r)) .
+                printCarte("Score", getScoresRencontre($r))."
+            </section>
+            <section class=\"laListe\">".
+                printTableauJoueursRencontre($r).
+            "</section>
+            <a href=\"ModifierRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a>
+        </div>"
+    );
+}
 ?>
