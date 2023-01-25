@@ -33,6 +33,7 @@ main {
 
 .pitiCarte{
     border: 1px solid;
+    border-radius: 15px;
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
@@ -46,6 +47,11 @@ main {
     padding: 5px;
 }
 
+.pitiCarte td{
+    display: flex;
+    justify-content: center;
+}
+
 .caracteristique {
 
     display: flex;
@@ -55,7 +61,7 @@ main {
     
 }
 
-.lescartes{
+.LesPitiCarts{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -89,3 +95,4 @@ nav a input{
 fieldset{
     background-color: white;
 }
+

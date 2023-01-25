@@ -20,7 +20,7 @@
         <main>
         <section class='LesPitiCarts'>
         <form action='../fonctionsPhp/changerParamRencontre.php?id_rencontre=".$id_rencontre."' method='POST'>
-            <div class='lescartes'>
+            <div class='LesPitiCarts'>
                 <div class='pitiCarte'>
                     <table>
                     <tr>
