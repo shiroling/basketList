@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-    require("header.php");
+
     require("../fonctionsPhp/Rencontre.php");
     function printModifRencontre($id_rencontre) {
         $r = getRencontre($id_rencontre);
@@ -20,104 +20,105 @@
         <main>
         <section class='LesPitiCarts'>
         <form action='../fonctionsPhp/changerParamRencontre.php?id_rencontre=".$id_rencontre."' method='POST'>
-
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Nom equipe adverse
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='text' name='nomOpposant' value='".$r['NomOpposant']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Heure debut
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='time' name='debut' value='".$r['HeureDebut']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Heure fin
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='time' name='fin' value='".$r['HeureFin']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Date
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='date' name='date' value='".$r['DateMatch']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Lieu
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='text' name='lieu' value='".$r['Lieu_de_rencontre']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Score locaux
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                    <input type='text' name='scoreLocaux' value='".$r['ScoreLocaux']."'>
-                    </td>
-                </tr>
-                </table>
-            </div>
-            <div class='pitiCarte'>
-                <table>
-                <tr>
-                    <th>
-                        Score Visiteur
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type='text' name='scoreVisiteurs' value='".$r['ScoreVisiteurs']."'> 
-                    </td>
-                </tr>
-                </table>
+            <div class='lescartes'>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Nom equipe adverse
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='text' name='nomOpposant' value='".$r['NomOpposant']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Heure debut
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='time' name='debut' value='".$r['HeureDebut']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Heure fin
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='time' name='fin' value='".$r['HeureFin']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Date
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='date' name='date' value='".$r['DateMatch']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Lieu
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='text' name='lieu' value='".$r['Lieu_de_rencontre']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Score locaux
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type='text' name='scoreLocaux' value='".$r['ScoreLocaux']."'>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                <div class='pitiCarte'>
+                    <table>
+                    <tr>
+                        <th>
+                            Score Visiteur
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type='text' name='scoreVisiteurs' value='".$r['ScoreVisiteurs']."'> 
+                        </td>
+                    </tr>
+                    </table>
+                </div>
             </div>
             <input type='submit' value='Mettre à jour'>
             <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
