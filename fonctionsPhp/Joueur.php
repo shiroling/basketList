@@ -21,6 +21,11 @@ function getJoueursRencontre($r) {
     return $st;
 }
 
+function hasImage($j) {
+    return $j['Photo'] != null;
+}
+
+
 function getImageJoueur($j) {
     return "../photo/" . $j['Photo'];
 }
@@ -161,10 +166,11 @@ function printTableauJoueursRencontre($r) {
 function printVisuJoueur($j)
 {
     return ("
-        <div>
-            <div classe=\"imageJoueur\">
-                <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
-            </div>
+        <div>".
+            (hasImage($j) ? "<div classe=\"imageJoueur\">
+                    <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
+                </div>" : "")            
+            ."
             <div class='caracteristiques'>
             " .
                 printCarte("Nom", $j['Nom']) .
