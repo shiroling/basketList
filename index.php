@@ -21,7 +21,7 @@
 				# définition des informations relatives à l’utilisateur
 				$_SESSION['variable'] = true;
 
-				header('Location: ./pagesPhp/acceuil.php');
+				header('Location: ./pagesPhp/ListeRencontre.php');
 				exit();
 			} else
 			echo "<script>alert('Identifiant ou mot de passe incorrect');</script>";

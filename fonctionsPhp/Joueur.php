@@ -65,7 +65,7 @@ function printTableauJoueursAll() {
             <td> " . $item['Nom'] . " </td>
             <td> " . $item['Prenom'] . "
             <td> " . getPoste($item['Poste']) . " </td>
-            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a target='_self' href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>
         ");
     }
@@ -91,7 +91,7 @@ function printTableauJoueursActifs() {
             <td> " . $item['Nom'] . " </td>
             <td> " . $item['Prenom'] . "
             <td> " . getPoste($item['Poste']) . " </td>
-            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a target='_self' href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>
         ");
     }
@@ -121,7 +121,7 @@ function printTableauJoueursActifsModif($id_rencontre) {
             <td> " . $item['Prenom'] . "
             <td> " . getPoste($item['Poste']) . " </td>
             <td> <input type='checkbox' name='players[]' value='" . $item['Id_Joueur'] . "'> </td>
-            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a target='_self' href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>
         ");
     }
@@ -137,7 +137,7 @@ function printTableauJoueursActifsModif($id_rencontre) {
 
 function printTableauJoueursRencontre($r) {
     $st = getJoueursRencontre($r);
-    echo ("
+    echo "
         <table>
         <tr>
             <th> Licence </th>
@@ -146,7 +146,7 @@ function printTableauJoueursRencontre($r) {
             <th> Poste </th>
             <th> Voir details</th>
         </tr>
-    ");
+    ";
     foreach ($st as $item) {
         echo("
         <tr>
@@ -154,7 +154,7 @@ function printTableauJoueursRencontre($r) {
             <td> " . $item['Nom'] . " </td>
             <td> " . $item['Prenom'] . "
             <td> " . getPoste($item['Poste']) . " </td>
-            <td> <a href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a target='_self' href=\"visuJoueur.php?id=". $item['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>
         ");
     }
@@ -181,7 +181,7 @@ function printVisuJoueur($j)
                 printCarte("Statut", getStatut($j['Statut'])) . 
             "</div>
             <div classe=\"boutons\">
-                <td> <a href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a> </td>
+                <td> <a target='_self' href=\"ModifierJoueur.php?id=". $j['Id_Joueur']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a> </td>
             </div>
         </div>"
     );
