@@ -13,4 +13,3 @@
         <a href="../pagesPhp/ListeRencontre.php"><input type="button" value="Rencontres"></a>
     </nav>
 </header>
-</html>
