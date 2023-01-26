@@ -24,7 +24,7 @@ require("../fonctionsPhp/Joueur.php");
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $j = getJoueur($id)->fetch();
-            printVisuJoueur($j);
+            echo printVisuJoueur($j);
         } else {
             echo ("<h3> Aucun joueur à afficher</h3>");
         }
