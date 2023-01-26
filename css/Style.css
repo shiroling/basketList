@@ -72,6 +72,8 @@ main {
     margin: 15px;
     width: 75%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .boutons input{
@@ -93,6 +95,7 @@ nav a input{
 }
 
 fieldset{
+    border-radius: 15px;
     background-color: white;
 }
 
