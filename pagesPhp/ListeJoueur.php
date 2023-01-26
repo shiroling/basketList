@@ -20,7 +20,7 @@
 		printTableauJoueursAll();
 
 	?>
-	<a href="../fonctionsPhp/ajouterJoueur.php"><input type="button" value="Nouveau joueur"></a>
+	<a href="../fonctionsPhp/ajouterJoueur.php" target="_self"><input type="button" value="Nouveau joueur"></a>
 
 </body>
 </html>

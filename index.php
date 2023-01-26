@@ -3,7 +3,7 @@
 	//on ouvre la session et on redirige sur l'acceuil si on est déja co
 	session_start();
 	if(isset($_SESSION['variable'])) {
-		header("Location: ./pagesPhp/acceuil.php");
+		header("Location: ./pagesPhp/ListeRencontre.php");
 		exit();
 	}
 ?>
