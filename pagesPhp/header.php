@@ -9,8 +9,7 @@
 </head>
 <header>
     <nav>
-        <a href="../pagesPhp/acceuil.php"><input type="button" value="Accueil"></a>
-        <a href="../pagesPhp/ListeJoueur.php"><input type="button" value="Voir liste des Jouers"></a>
+        <a href="../pagesPhp/ListeJoueur.php"><input type="button" value="Joueurs"></a>
         <a href="../pagesPhp/ListeRencontre.php"><input type="button" value="Rencontres"></a>
     </nav>
 </header>
