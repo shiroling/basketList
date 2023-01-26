@@ -1,0 +1,7 @@
+couturier-leclerc.neiko.fr
+
+identifiant:
+    admin
+
+password:
+    password
