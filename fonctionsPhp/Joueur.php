@@ -160,12 +160,12 @@ function printTableauJoueursRencontre($r) {
 
 function printVisuJoueur($j)
 {
-    echo ("
+    return ("
         <div>
             <div classe=\"imageJoueur\">
                 <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
             </div>
-            <div class=\"caracteristiques\">
+            <div class='caracteristiques'>
             " .
                 printCarte("Nom", $j['Nom']) .
                 printCarte("Prenom", $j['Prenom']) .
@@ -180,7 +180,4 @@ function printVisuJoueur($j)
         </div>"
     );
 }
-    function printCartejoueur($idJoueur) {
-    echo ("PrintCartejoueur() n'est pas encore implémenté !!!");
-    }
 ?>
