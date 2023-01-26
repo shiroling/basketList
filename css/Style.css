@@ -7,7 +7,6 @@ html{
 body{
 
     padding: 10px;
-    background-color: #ffeeff;
     height: 100%;
     
 }
@@ -22,7 +21,6 @@ img{
 }
 
 main {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,13 +89,13 @@ fieldset{
 }
 
 header {
-    background-color: #fdb927; /* Couleur similaire à celle utilisée dans les ballons de basket-ball */
+    background-color: #fde0a2;
     display: flex;
     align-items: center;
     border-radius: 15px;
     justify-content: space-around;
     padding: 10px 20px;
-    box-shadow: 0px 0px 10px 2px #333; /* pour donner un effet de 3D */
+    box-shadow: 0px 0px 10px 2px #333;
 }
 
 nav {
@@ -148,8 +146,8 @@ tr:nth-child(even) {
 }
 
 header input[type="button"] {
-    background-color: #fdb927;
-    color: white;
+    background-color: #fde0a2;
+    color: #333;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -169,4 +167,82 @@ input[type="button"] {
 input[type="button"]:hover {
     background-color: #333;
     color: #fdb927;
+}
+
+form {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px #333;
+}
+
+legend {
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+label, input[type="submit"] {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #fdb927;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #fdb927;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+ 
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #fdb927;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #fdb927;
+    border-radius: 4px;
+    background-color: orange; /* Couleur de fond */
+    color: white; /* Couleur de police */
+    padding: 12px; /* Espacement intérieur */
+    border-radius: 4px; /* Arrondi des bords */
+    border: none; /* Pas de bordure */
+    box-shadow: 0px 0px 3px gray; /* Ombre */
+    font-size: 16px; /* Taille de police */
+    appearance: none; /* Masque l'apparence par défaut */
+}
+input[type="submit"]:hover {
+    background-color: #333;
+    color: #fdb927;
+}
+
+html{
+    background-color: #fdb927;
+}
+
+fieldset {
+    border-style: solid;
+    border-color: #fdb927;
+    border-width: 5px;
+    border-radius: 5px;
 }
