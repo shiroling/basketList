@@ -161,7 +161,7 @@ function printTableauJoueursRencontre($r) {
 function printVisuJoueur($j)
 {
     return ("
-        <div>
+        <div class='caracteristiques'>
             <div classe=\"imageJoueur\">
                 <img src=\"" . getImageJoueur($j) . "\" alt=\"image de " . $j['Nom'] . " " . $j['Prenom'] . "\" width=\"30%\">        
             </div>
