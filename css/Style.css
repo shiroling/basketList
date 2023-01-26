@@ -76,10 +76,6 @@ main {
     justify-content: center;
 }
 
-.boutons input{
-    width: 49%;
-    height: 100%;
-}
 
 
 nav a input{
@@ -95,25 +91,57 @@ header {
     background-color: #fdb927; /* Couleur similaire à celle utilisée dans les ballons de basket-ball */
     display: flex;
     align-items: center;
-
-    justify-content: center;
+    border-radius: 15px;
+    justify-content: space-around;
     padding: 10px 20px;
     box-shadow: 0px 0px 10px 2px #333; /* pour donner un effet de 3D */
 }
 
 nav {
     display: flex;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    margin-right: 20px;
     font-family: 'Arial', sans-serif;
     font-size: 1.2em;
 }
 
-input[type="button"] {
+
+input[type="button"]:hover {
+    background-color: #333;
+    color: #fdb927;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #fdb927;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #fdb927;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fde0a2;
+}
+
+header input[type="button"] {
     background-color: #fdb927;
     color: white;
     border: none;
@@ -121,7 +149,15 @@ input[type="button"] {
     cursor: pointer;
     font-family: 'Arial', sans-serif;
     font-size: 1.2em;
-    transition: all 0.3s ease-in-out; /* pour donner un effet de transition */
+    transition: all 0.3s ease-in-out; 
+}
+input[type="button"] {
+    background-color: #fdb927;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 input[type="button"]:hover {
