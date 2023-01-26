@@ -32,7 +32,7 @@ main {
 }
 
 .pitiCarte{
-    border: 1px solid;
+    padding-bottom: 10%;
     border-radius: 15px;
     display: flex;
     flex-grow: 1;
@@ -43,8 +43,11 @@ main {
     width: 7em;
 
     margin: 10px;
-    background-color: #dddddd;
+    background-color: #fdb927;
     padding: 5px;
+}
+.pitiCarte table{
+    margin-top: 0px;
 }
 
 .pitiCarte td{
@@ -52,7 +55,7 @@ main {
     justify-content: center;
 }
 
-.caracteristique {
+.caracteristiques {
 
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +125,9 @@ table {
     border-radius: 10px;
     font-family: 'Arial', sans-serif;
     font-size: 1.2em;
+}
+
+main table{
     margin-top: 20px;
 }
 
