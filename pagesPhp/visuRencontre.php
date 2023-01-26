@@ -19,8 +19,13 @@
         echo"<main>";
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $j = getRencontre($id);
-            printVisuRencontre($j);
+            $r = getRencontre($id);
+            echo printVisuRencontre($r);
+            echo "<section class=\"laListe\">";
+            printTableauJoueursRencontre($r);
+            echo "</section>
+                    <a target='_self' href=\"ModifierRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a>
+                </div>";
         } else {
             echo ("<h3> Aucun joueur à afficher</h3>");
         }

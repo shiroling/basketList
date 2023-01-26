@@ -72,7 +72,7 @@ function printRencontresAll() {
             <td>" . $r['DateMatch'] . " à " . $r['HeureDebut'] . " </td>
             <td>" . getLieuRencontre($r) . "</td>
             <td>" . getScoresRencontre($r) . "</td>
-            <td> <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
+            <td> <a target='_self' href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"details\" /></a> </td>
         </tr>"
         );
     }
@@ -81,7 +81,7 @@ function printRencontresAll() {
 
 function printVisuRencontre($r)
 {
-    echo ("
+    return"
         <div>
             <section class=\"LesPitiCarts\">" .
                 printCarte("Equipe adverse", $r['NomOpposant']) .
@@ -89,12 +89,7 @@ function printVisuRencontre($r)
                 printCarte("Lancement", $r['HeureDebut']) .
                 printCarte("Lieu", getLieuRencontre($r)) .
                 printCarte("Score", getScoresRencontre($r))."
-            </section>
-            <section class=\"laListe\">".
-                printTableauJoueursRencontre($r).
-            "</section>
-            <a href=\"ModifierRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Modifier\" /></a>
-        </div>"
-    );
+            </section>"
+    ;
 }
 ?>

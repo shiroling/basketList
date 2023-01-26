@@ -120,8 +120,8 @@
                     </table>
                 </div>
             </div>
-            <input type='submit' value='Mettre à jour'>
-            <a href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
+            <input target='_self' type='submit' value='Mettre à jour'>
+            <a target='_self' href=\"visuRencontre.php?id=". $r['Id_Rencontre']."\" target=\"_blank\"> <input type=\"button\" value=\"Annuler\" /></a>
 
         </form>
         </section>";
