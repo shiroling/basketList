@@ -14,7 +14,7 @@ function getClubLocation() {
 }
 
 function printCarte($libele, $info) {
-    echo ("
+    return "
         <div class=\"pitiCarte\">
             <table>
             <tr>
@@ -29,7 +29,7 @@ function printCarte($libele, $info) {
             </tr>
             </table>
         </div>
-    ");
+    ";
 }
 
 function attribuerphoto($NUMLICENCE, $target_file) {
